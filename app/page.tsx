@@ -262,10 +262,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    My journey into programming started in university, during a final-year project where I built a mobile app
-                    that used image recognition to help kids identify animals and plants. That project sparked something
-                    big. Fast forward a few years, and I'm now contributing to projects across telco, enterprise, and
-                    government sectors.
+                   Though I was studying networking at university, my journey into programming truly began during a final-year project where I built a mobile app using image recognition to help kids identify animals and plants. That project sparked something big, and fast forward a few years, I’m now contributing to projects across the telco, enterprise, and government sectors.
                   </p>
                 </CardContent>
               </Card>
