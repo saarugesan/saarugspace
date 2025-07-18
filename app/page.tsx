@@ -103,7 +103,7 @@ export default function Portfolio() {
       isPrivate: true,
       impact: "Supported critical on-site operations and streamlined request handling processes.",
       sector: "Telco (Multi-client)",
-      solution: "Worked on Phase 3 feature updates across two different companies using similar legacy systems. Integrated new backend APIs while preserving core portal functionality.",
+      solution: "Worked on Phase 3 feature updates. Integrated new backend APIs while preserving core portal functionality.",
       challenges: "Navigated heavily customized and undocumented legacy code written by various developers over the years."
     },
     {
