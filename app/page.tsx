@@ -42,14 +42,14 @@ export default function Portfolio() {
     },
     {
       title: "Automation for Support Ticket Creation",
-      description: "Built an internal automation tool that mimics human-like interactions to create support tickets.",
-      role: "Solution Provider",
+      description: "Led the initiative to automate support ticket creation by proposing and supervising the development of a human-like interaction tool.",
+      role: "Solution Provider / Technical Lead",
       tech: ["Python", "Selenium", "Cronjob"],
       isPrivate: true,
       impact: "Reduced manual ticket creation efforts across departments.",
       sector: "Telco",
-      solution: "Developed a Python-based automation script to simulate user behavior, bypass CAPTCHA using login API inspection and session retention. Integrated MFA using a dedicated email forwarding mechanism.",
-      challenges: "Dealing with MFA, CAPTCHA protections, and secure login flows on a limited-access internal portal. Required creative session handling and API-level workarounds."
+      solution: "Proposed a Python-based automation approach that mimics user behavior and overcomes CAPTCHA using login API inspection and session retention. Oversaw integration of MFA via a dedicated email forwarding mechanism.",
+      challenges: "Guided the team through handling MFA, CAPTCHA protections, and secure login flows on a restricted internal portal, using creative session and API-level solutions."
     },
     {
       title: "Appointment Module",
