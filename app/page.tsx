@@ -17,12 +17,27 @@ import {
   Zap,
   Target,
   AlertTriangle,
+  ChevronDown
 } from "lucide-react"
 import Image from 'next/image';
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef} from "react"
+
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false)
+
+  const workRef = useRef<HTMLElement | null>(null);
+  const inTouch = useRef<HTMLElement | null>(null);
+
+
+  const scrollToWork = () => {
+    workRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    inTouch.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  
 
   useEffect(() => {
     setIsVisible(true)
@@ -220,12 +235,14 @@ export default function Portfolio() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
+              onClick={scrollToWork}
               size="lg"
               className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black border-0 font-semibold transform hover:scale-105 transition-all duration-300"
             >
               View My Work
             </Button>
             <Button
+              onClick={scrollToContact}
               size="lg"
               variant="outline"
               className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black bg-transparent transform hover:scale-105 transition-all duration-300"
@@ -236,9 +253,7 @@ export default function Portfolio() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-amber-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-amber-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
+            <ChevronDown size={40} color="#ffca28" />
         </div>
       </section>
 
@@ -363,7 +378,7 @@ export default function Portfolio() {
 
 
       {/* Projects Section */}
-      <section className="py-20 px-4 relative">
+      <section ref={workRef} className="py-20 px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Featured Projects</h2>
@@ -532,7 +547,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 relative">
+      <section ref={inTouch} className="py-20 px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Let's Create Something Amazing</h2>
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
@@ -558,28 +573,28 @@ export default function Portfolio() {
             </Button> */}
 
             <a href="mailto:saarugesan@gmail.com">
-  <Button
-    size="lg"
-    className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black border-0 font-semibold transform hover:scale-110 transition-all duration-300"
-  >
-    <Mail className="w-5 h-5 mr-2" />
-    Send Message
-  </Button>
-</a>
-<a
-  href="https://www.linkedin.com/in/saarugesan"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    size="lg"
-    variant="outline"
-    className="border-gray-500 text-gray-300 hover:bg-gray-700 bg-transparent transform hover:scale-110 transition-all duration-300"
-  >
-    <Linkedin className="w-5 h-5 mr-2" />
-    Connect on LinkedIn
-  </Button>
-</a>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black border-0 font-semibold transform hover:scale-110 transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Send Message
+            </Button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/saarugesan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-gray-500 text-gray-300 hover:bg-gray-700 bg-transparent transform hover:scale-110 transition-all duration-300"
+            >
+              <Linkedin className="w-5 h-5 mr-2" />
+              Connect on LinkedIn
+            </Button>
+          </a>
           </div>
 
           <div className="text-gray-500">
