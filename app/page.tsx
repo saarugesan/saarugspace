@@ -598,7 +598,7 @@ export default function Portfolio() {
           </div>
 
           <div className="text-gray-500">
-            <p>saargesan@gmail.com</p>
+            <p>saarugesan@gmail.com</p>
           </div>
         </div>
       </section>
